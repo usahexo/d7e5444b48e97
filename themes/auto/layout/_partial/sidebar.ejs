@@ -1,0 +1,17 @@
+<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <% theme.widgets.forEach(function(widget){ %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
+  <% if (theme.links && theme.links.length){ %>
+  <div class="widget-wrap">
+            <h3 class="widget-title">Links</h3>
+             <div class="widget">
+                <ul>
+                    <% theme.links.forEach(function(item){ %>
+                    <li><a href="<%- item.link %>" class="animsition-link"><%= item.name %></a></li>
+                    <% }); %>
+                </ul>
+             </div>
+</div>
+            <% } %>
+</aside>
