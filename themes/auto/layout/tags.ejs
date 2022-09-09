@@ -1,0 +1,8 @@
+<section class="archives-wrap">
+  <% if (site.tags.length){ %>
+    <div class="page-type-title"><%= __('tags') %></div>
+    <div class="page-type-content">
+    <%- list_tags({show_count: theme.show_count}) %>
+    </div>
+  <% } %>
+</section>
