@@ -1,0 +1,19 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> By Autoload<br>
+      Driven - <a href="<%= config.url %>" target="_blank"><%= config.author %></a>|Theme - <a href="<%= config.url %>" target="_blank"><%= config.title %></a>
+    </div>
+    <div id="footer-link" class="inner">
+      <% if (theme.footer_links && theme.footer_links.length){ %>
+       <span>Links:</span>
+                    <% theme.footer_links.forEach(function(item){ %>
+                    <a href="<%- item.link %>" class="animsition-link"><%= item.name %></a>
+                    <% }); %>
+            <% } %>
+    </div>
+  </div>
+</footer>
